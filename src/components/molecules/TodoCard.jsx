@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import React, { useState } from "react";
 import { defaultTodos } from "../../constantData";
 import Checkbox from "expo-checkbox";
@@ -38,7 +38,7 @@ const TodoCard = ({ id, title, description, done, onDelete, setTodos }) => {
       </View>
       <Pressable onPress={onDelete}>
         <View>
-          <Text style={{ color: "red", backgroundColor: "" }}>Delete</Text>
+          <Image source={require("../../assets/close-circle-fill.png")} />
         </View>
       </Pressable>
     </View>
