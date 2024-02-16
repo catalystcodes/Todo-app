@@ -25,6 +25,26 @@ const TodoList = () => {
 
   return (
     <>
+      {!todos.length && (
+        <Pressable
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 30,
+              marginTop: 50,
+              fontWeight: "700",
+              opacity: 0.3,
+            }}
+          >
+            Add your Task
+          </Text>
+        </Pressable>
+      )}
       <FlatList
         data={todos}
         bounces={true}
