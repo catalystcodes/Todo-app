@@ -27,7 +27,7 @@ const TodoList = () => {
     <>
       <FlatList
         data={todos}
-        bounces={false}
+        bounces={true}
         contentContainerStyle={{ rowGap: 20 }}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (

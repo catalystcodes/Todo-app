@@ -2,8 +2,7 @@ import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 const DeleteIcon = (props) => (
   <Svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
+    fill={props.color ? props.color : "red"}
     viewBox="0 0 24 24"
     width={24}
     height={24}
