@@ -11,6 +11,7 @@ import {
 import React, { useState } from "react";
 import { defaultTodos } from "../../constantData";
 import TodoCard from "../../components/molecules/TodoCard";
+import AddIcon from "../../components/atoms/icons/AddIcon";
 
 const TodoList = () => {
   const [isAdd, setIsAdd] = useState(false);
@@ -48,7 +49,7 @@ const TodoList = () => {
         }}
         style={styles.floatButton}
       >
-        <Text style={{ color: "#fff", fontSize: 28 }}>+</Text>
+        <AddIcon />
       </Pressable>
 
       <Modal visible={isAdd} transparent animationType="fade">
@@ -153,12 +154,12 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 20,
     right: 20,
-    width: 50,
-    height: 50,
-    backgroundColor: "blue",
-    borderRadius: 100,
-    alignItems: "center",
-    justifyContent: "center",
+    // width: 50,
+    // height: 50,
+    // backgroundColor: "blue",
+    // borderRadius: 100,
+    // alignItems: "center",
+    // justifyContent: "center",
   },
   inputDeco: {
     marginBottom: 10,

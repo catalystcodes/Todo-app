@@ -3,13 +3,13 @@ import Svg, { Path } from "react-native-svg";
 const DeleteIcon = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
-    fill={props.color ? props.color : "currentColor"}
+    fill="currentColor"
     viewBox="0 0 24 24"
     width={24}
     height={24}
     {...props}
   >
-    <Path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10Zm0-11.414L9.172 7.757 7.757 9.172 10.586 12l-2.829 2.828 1.415 1.415L12 13.414l2.828 2.829 1.415-1.415L13.414 12l2.829-2.828-1.415-1.415L12 10.586Z" />
+    <Path d="M17 4h5v2h-2v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6H2V4h5V2h10v2ZM9 9v8h2V9H9Zm4 0v8h2V9h-2Z" />
   </Svg>
 );
 export default DeleteIcon;
