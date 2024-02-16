@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import React, { useState } from "react";
 import { defaultTodos } from "../../constantData";
 import Checkbox from "expo-checkbox";
+import DeleteIcon from "../atoms/icons/DeleteIcon";
 
 const TodoCard = ({ id, title, description, done, onDelete, setTodos }) => {
   const [isChecked, setChecked] = useState(false);
@@ -38,7 +39,8 @@ const TodoCard = ({ id, title, description, done, onDelete, setTodos }) => {
       </View>
       <Pressable onPress={onDelete}>
         <View>
-          <Image source={require("../../assets/close-circle-fill.png")} />
+          {/* <Image source={require("../../assets/close-circle-fill.png")} /> */}
+          <DeleteIcon color="red" />
         </View>
       </Pressable>
     </View>
@@ -51,12 +53,15 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "rgba(128, 128, 128, 0.3)",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
     alignItems: "center",
 
     padding: 20,
     borderRadius: 8,
-    rowGap: 10,
+    columnGap: 20,
+  },
+  subContainer: {
+    flexGrow: 1,
   },
   title: {
     fontSize: 16,
